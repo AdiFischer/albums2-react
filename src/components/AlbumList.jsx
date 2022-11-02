@@ -4,7 +4,7 @@ import AlbumCard from "../components/AlbumCard";
 export default function AlbumList() {
     const [albums, setAlbums] = useState()
     useEffect(() => {
-        fetch('https://albums-api-af.web.app/albums')
+        fetch("https://albums-api-af.web.app"+'/albums')
         .then(response => response.json())
         .then(setAlbums)
         .catch(alert)
@@ -17,7 +17,8 @@ export default function AlbumList() {
         : albums.map(thisAlbum => (
             <AlbumCard
             key={thisAlbum.albumId}
-            thisAlbum={thisAlbum} />
+            thisAlbum={thisAlbum} 
+            setAlbums={setAlbums}/>
         )) 
     }
         </main>

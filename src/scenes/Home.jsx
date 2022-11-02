@@ -1,8 +1,11 @@
+import Header from "../components/Header"
+import AlbumList from "../components/AlbumList"
+
 export default function Home() {
     return(
         <>
-        <h1>Header...</h1>
-        <p>Album List</p>
+        <Header title={'Best-Selling Albums'} />
+        <AlbumList />
         </>
     )
 }
